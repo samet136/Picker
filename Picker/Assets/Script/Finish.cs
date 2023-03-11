@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
 public class Finish : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
@@ -13,6 +12,7 @@ public class Finish : MonoBehaviour
         if (other.CompareTag("BurderObject"))
         {
             gameManager.BorderReached();
+            gameManager.Sounds[1].Play();
         }
     }
 }
